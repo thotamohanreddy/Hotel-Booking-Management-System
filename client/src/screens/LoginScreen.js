@@ -34,7 +34,7 @@ function LoginScreen() {
       {loading && <Loader></Loader>}
 
       <div className="row justify-content-center mt-5">
-        <div className="col-md-5 mt-5">
+        <div className="col-md-3 mt-5">
           {error.length > 0 && <Error msg={error}></Error>}
           <div className="bs">
             <h2>Login</h2>
@@ -47,6 +47,7 @@ function LoginScreen() {
               onChange={(e) => {
                 setEmail(e.target.value);
               }}
+              style={{marginBottom: "10px"}}
             />
             <input
               type="password"

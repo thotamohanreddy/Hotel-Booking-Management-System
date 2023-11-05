@@ -51,7 +51,7 @@ function RegisterScreen() {
       {error.length > 0 && <Error msg={error}></Error>}
 
       <div className="row justify-content-center mt-5">
-        <div className="col-md-5 mt-5">
+        <div className="col-md-3 mt-5">
           {success.length > 0 && <Success msg={success}></Success>}
           <div className="bs">
             <h2>Register</h2>
@@ -63,6 +63,7 @@ function RegisterScreen() {
               onChange={(e) => {
                 setName(e.target.value);
               }}
+              style={{marginBottom: "10px"}}
             />
             <input
               type="text"
@@ -72,18 +73,20 @@ function RegisterScreen() {
               onChange={(e) => {
                 setEmail(e.target.value);
               }}
+              style={{marginBottom: "10px"}}
             />
             <input
-              type="text"
+              type="password"
               className="form-control"
               placeholder="password"
               value={password}
               onChange={(e) => {
                 setPassword(e.target.value);
               }}
+              style={{marginBottom: "10px"}}
             />
             <input
-              type="text"
+              type="password"
               className="form-control"
               placeholder="confirm password"
               value={cpassword}
