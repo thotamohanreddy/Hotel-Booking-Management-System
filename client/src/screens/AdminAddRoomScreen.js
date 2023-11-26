@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from "axios";
 import { Form, Input, InputNumber, Button, Select } from "antd";
 
 import Swal from "sweetalert2";
@@ -33,7 +34,7 @@ function AdminAddRoomScreen() {
     setError("");
     setLoading(true);
     try {
-
+      await axios.post("http://localhost:3000/api/rooms/addroom", values);
       Swal.fire("Congratulations", "Your Room Added Successfully", "success");
       form.resetFields();
     } catch (error) {

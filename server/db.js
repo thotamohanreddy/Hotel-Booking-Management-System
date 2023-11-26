@@ -2,12 +2,9 @@ const mongoose = require("mongoose");
 const fs = require("fs");
 const path = require("path");
 
-// PLEASE EDIT YOUR MONGODB CONNECTION STRING HERE
-const mongodbUser = process.env.MONGODB_USER;
-const mongodbPassword = process.env.MONGODB_PASSWORD;
-const mongodbCluster = process.env.MONGODB_CLUSTER;
+const mongodbConnectionString = process.env.MONGO_CONNECTION_STRING;
 
-mongoose.connect(`mongodb+srv://${mongodbUser}:${mongodbPassword}@${mongodbCluster}.ft29fc4.mongodb.net/?retryWrites=true&w=majority`, {
+mongoose.connect(mongodbConnectionString, {
   useUnifiedTopology: true,
   useNewUrlParser: true,
 });
